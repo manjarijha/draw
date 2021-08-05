@@ -9,10 +9,20 @@
 </head>
 <body>
 
-<canvas id="canvas" style="background-color: blueviolet; border: 2px solid white;"></canvas>
-<button id="clear" onclick="clear()">Clear</button>
-<button id="erase" onclick="erase()">erase</button>
+<canvas id="canvas" style ="border: 15px solid blueviolet ; background-color: rgba(255, 255, 255, 0.979); box-shadow: 2px 1px 14px 2px rgb(214, 209, 209); "></canvas>
+<div class="tools">
 
+<button id="clear" type="button" onclick="clear()" >Clear</button>
+<button id="erase" >erase</button>
+
+<div onclick="change_color(this)" class="color_palete" style="background: rgb(66, 174, 236);"></div>
+<div onclick="change_color(this)" class="color_palete" style="background: rgb(255, 62, 223);"></div>
+<div onclick="change_color(this)" class="color_palete" style="background: rgb(40, 224, 65);"></div>
+
+<input oninput="draw_color = this.value" type="color" class="color_box">
+<input oninput="draw_width = this.value" type="range" class="pen_range">
+
+</div>
 </body>
 </html>
 <script src="script.js"></script>
