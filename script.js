@@ -4,7 +4,7 @@ let start_bg = "white";
 ctx.fillStyle='start_bg';
 
 
-canvas.height = window.innerHeight - 130;
+canvas.height = window.innerHeight - 230;
 canvas.width = window.innerWidth -70 ;
 
 let painting = false;
@@ -28,7 +28,7 @@ function startPostion (e)
     painting = true;
     draw(e);
 }
-function finishedPosition ()
+function finishedPosition (e)
 {
     painting = false;
     ctx.beginPath();
