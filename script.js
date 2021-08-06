@@ -1,18 +1,15 @@
 const clearcanvas = document.getElementById("clear")
+const rubbing = document.getElementById("erase")
+const lighting = document.getElementById("bulb")
 const canvas = document.getElementById("canvas")
 const ctx = canvas.getContext('2d');
 
-canvas.height = window.innerHeight - 230;
-canvas.width = window.innerWidth -70 ;
+canvas.height = window.innerHeight - 150;
+canvas.width = window.innerWidth -40 ;
 
-let start_bg = "white";
 let painting = false;
-let erase = false;
 let draw_color = 'black';
 let draw_width = "2";
-
-
-
 
 function change_color(element)
 {
@@ -50,8 +47,14 @@ canvas.addEventListener("touchstart", startPostion )
 canvas.addEventListener("touchend", finishedPosition)
 canvas.addEventListener("touchmove", draw)
 clearcanvas.addEventListener("click" , clear)
+lighting.addEventListener("click",bulb )
 
 function clear()
 {
     ctx.clearRect(0, 0,canvas.width,canvas.height);
+}
+function bulb()
+{
+    ctx.fillStyle='black';
+    ctx.fillRect(0,0,canvas.width,canvas.height);
 }

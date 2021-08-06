@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>day-4</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9221aff666.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<canvas id="canvas" style ="border: 15px solid rgb(125, 36, 209) ; background-color: white; box-shadow: 2px 1px 14px 2px rgb(214, 209, 209); "></canvas>
+<canvas id="canvas" style ="border: 5px solid rgb(134, 125, 143) ; background-color: white; box-shadow: 2px 1px 14px 2px rgb(214, 209, 209); "></canvas>
 <div class="tools">
 
-<button id="clear" type="button" onkeydown="clear()" >Clear</button>
-<button id="erase" >erase</button>
-
+<div class="colors">
 <div onclick="change_color(this)" class="color_palete" style="background: rgb(66, 174, 236);"></div>
 <div onclick="change_color(this)" class="color_palete" style="background: rgb(255, 62, 223);"></div>
 <div onclick="change_color(this)" class="color_palete" style="background: rgb(40, 224, 65);"></div>
@@ -23,6 +22,13 @@
 
 <input oninput="draw_color = this.value" type="color" class="color_box">
 <input oninput="draw_width = this.value" type="range" class="pen_range">
+<i class="far fa-lightbulb fa-2x " id="bulb"></i>
+</div>
+<div class="btn">
+    
+    <button id="erase" onclick="change_color(this)" style="background: white;" >erase</button>
+    <button id="clear" onclick="clear()" >Clear</button>
+    </div>
 
 </div>
 </body>
