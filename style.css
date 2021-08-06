@@ -7,7 +7,13 @@ body
 {
     background-color: rgb(26, 20, 20);
 }
-
+.tools
+{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    flex: wrap;
+}
 .tools .color_palete
 {
     
